@@ -1081,3 +1081,688 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+
+
+
+
+
+// from js start 
+
+
+
+
+
+
+
+/* =========================================================
+   START YOUR PROJECT FORM
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form =
+        document.getElementById("startProjectForm");
+
+    const successBox =
+        document.getElementById("projectSuccess");
+
+    const newProjectBtn =
+        document.getElementById("newProjectBtn");
+
+    const progress =
+        document.getElementById("formProgress");
+
+    const message =
+        document.getElementById("projectMessage");
+
+    const messageCount =
+        document.getElementById("messageCount");
+
+
+    /* =====================================================
+       YOUR BUSINESS WHATSAPP NUMBER
+       
+       IMPORTANT:
+       Replace this with your actual WhatsApp Business
+       number including country code.
+
+       Example:
+       919876543210
+
+       Do NOT use +, spaces or brackets.
+    ===================================================== */
+
+    const BUSINESS_WHATSAPP =
+        "8226801720";
+
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const clientName =
+        document.getElementById("clientName");
+
+    const clientEmail =
+        document.getElementById("clientEmail");
+
+    const clientMobile =
+        document.getElementById("clientMobile");
+
+    const clientState =
+        document.getElementById("clientState");
+
+    const district =
+        document.getElementById("district");
+
+    const projectLocation =
+        document.getElementById("projectLocation");
+
+    const projectType =
+        document.getElementById("projectType");
+
+    const requiredService =
+        document.getElementById("requiredService");
+
+    const projectArea =
+        document.getElementById("projectArea");
+
+    const budget =
+        document.getElementById("budget");
+
+    const startDate =
+        document.getElementById("startDate");
+
+    const timeline =
+        document.getElementById("timeline");
+
+    const agreement =
+        document.getElementById("formAgreement");
+
+
+    /* =====================================================
+       DATE MIN = TODAY
+    ===================================================== */
+
+    if (startDate) {
+
+        const today =
+            new Date().toISOString().split("T")[0];
+
+        startDate.min = today;
+
+    }
+
+
+    /* =====================================================
+       MESSAGE CHARACTER COUNT
+    ===================================================== */
+
+    if (message && messageCount) {
+
+        message.addEventListener(
+            "input",
+            function () {
+
+                messageCount.textContent =
+                    message.value.length;
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       MOBILE NUMBER
+       ONLY NUMBERS
+    ===================================================== */
+
+    if (clientMobile) {
+
+        clientMobile.addEventListener(
+            "input",
+            function () {
+
+                this.value =
+                    this.value
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       PROGRESS
+    ===================================================== */
+
+    function updateProgress() {
+
+        const fields = [
+            clientName,
+            clientEmail,
+            clientMobile,
+            district,
+            projectLocation,
+            projectType,
+            requiredService,
+            projectArea,
+            budget,
+            startDate,
+            timeline,
+            message
+        ];
+
+        let filled = 0;
+
+        fields.forEach(function (field) {
+
+            if (
+                field &&
+                field.value.trim() !== ""
+            ) {
+
+                filled++;
+
+            }
+
+        });
+
+
+        const percentage =
+            Math.round(
+                (filled / fields.length) * 100
+            );
+
+
+        if (progress) {
+
+            progress.textContent =
+                percentage + "%";
+
+        }
+
+    }
+
+
+    const allInputs =
+        form.querySelectorAll(
+            "input, select, textarea"
+        );
+
+
+    allInputs.forEach(function (input) {
+
+        input.addEventListener(
+            "input",
+            updateProgress
+        );
+
+        input.addEventListener(
+            "change",
+            updateProgress
+        );
+
+    });
+
+
+    /* =====================================================
+       ERROR
+    ===================================================== */
+
+    function showError(
+        field,
+        messageText
+    ) {
+
+        const group =
+            field.closest(".form-group");
+
+        if (!group) return;
+
+        group.classList.add(
+            "form-invalid"
+        );
+
+        const error =
+            group.querySelector(
+                ".field-error"
+            );
+
+        if (error) {
+
+            error.textContent =
+                messageText;
+
+        }
+
+    }
+
+
+    function clearErrors() {
+
+        const groups =
+            form.querySelectorAll(
+                ".form-group"
+            );
+
+        groups.forEach(function (group) {
+
+            group.classList.remove(
+                "form-invalid"
+            );
+
+            const error =
+                group.querySelector(
+                    ".field-error"
+                );
+
+            if (error) {
+
+                error.textContent = "";
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       EMAIL VALIDATION
+    ===================================================== */
+
+    function validEmail(email) {
+
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            .test(email);
+
+    }
+
+
+    /* =====================================================
+       SUBMIT
+    ===================================================== */
+
+    form.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            clearErrors();
+
+
+            let valid = true;
+
+
+            /* CLIENT NAME */
+
+            if (
+                clientName.value.trim().length < 2
+            ) {
+
+                showError(
+                    clientName,
+                    "Please enter your name."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* EMAIL */
+
+            if (
+                !validEmail(
+                    clientEmail.value.trim()
+                )
+            ) {
+
+                showError(
+                    clientEmail,
+                    "Please enter a valid email."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* MOBILE */
+
+            if (
+                !/^[6-9]\d{9}$/
+                    .test(
+                        clientMobile.value.trim()
+                    )
+            ) {
+
+                showError(
+                    clientMobile,
+                    "Enter a valid 10-digit mobile number."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* DISTRICT */
+
+            if (!district.value) {
+
+                showError(
+                    district,
+                    "Please select your district."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* LOCATION */
+
+            if (
+                projectLocation.value.trim()
+                    .length < 2
+            ) {
+
+                showError(
+                    projectLocation,
+                    "Please enter project location."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* PROJECT TYPE */
+
+            if (!projectType.value) {
+
+                showError(
+                    projectType,
+                    "Please select project type."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* SERVICE */
+
+            if (!requiredService.value) {
+
+                showError(
+                    requiredService,
+                    "Please select a service."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* AGREEMENT */
+
+            if (!agreement.checked) {
+
+                alert(
+                    "Please confirm the information provided."
+                );
+
+                valid = false;
+
+            }
+
+
+            /* STOP */
+
+            if (!valid) {
+
+                const firstInvalid =
+                    form.querySelector(
+                        ".form-invalid input, .form-invalid select"
+                    );
+
+                if (firstInvalid) {
+
+                    firstInvalid.focus();
+
+                }
+
+                return;
+
+            }
+
+
+            /* =================================================
+               CONTACT METHOD
+            ================================================= */
+
+            const contactMethod =
+                document.querySelector(
+                    'input[name="contactMethod"]:checked'
+                );
+
+
+            const selectedContact =
+                contactMethod
+                    ? contactMethod.value
+                    : "WhatsApp";
+
+
+            /* =================================================
+               DATE FORMAT
+            ================================================= */
+
+            let formattedDate =
+                "Not specified";
+
+
+            if (startDate.value) {
+
+                const date =
+                    new Date(
+                        startDate.value
+                    );
+
+                formattedDate =
+                    date.toLocaleDateString(
+                        "en-IN",
+                        {
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric"
+                        }
+                    );
+
+            }
+
+
+            /* =================================================
+               WHATSAPP MESSAGE
+            ================================================= */
+
+            const whatsappMessage = `
+
+🏗️ *NEW PROJECT ENQUIRY*
+━━━━━━━━━━━━━━━━━━━━━━
+
+👋 *Welcome to SSP STRUCTOVA!*
+
+Thank you for choosing us for your project.
+We have received a new project enquiry.
+
+*CLIENT DETAILS*
+━━━━━━━━━━━━━━━━━━━━━━
+👤 Client Name: ${clientName.value.trim()}
+📧 Email: ${clientEmail.value.trim()}
+📱 Mobile: ${clientMobile.value.trim()}
+
+*PROJECT LOCATION*
+━━━━━━━━━━━━━━━━━━━━━━
+📍 State: ${clientState.value}
+📍 District: ${district.value}
+📌 Project Location: ${projectLocation.value.trim()}
+
+*PROJECT DETAILS*
+━━━━━━━━━━━━━━━━━━━━━━
+🏢 Project Type: ${projectType.value}
+🛠️ Required Service: ${requiredService.value}
+📐 Area / Quantity: ${projectArea.value.trim() || "Not specified"}
+💰 Estimated Budget: ${budget.value || "Not specified"}
+
+*PROJECT TIMELINE*
+━━━━━━━━━━━━━━━━━━━━━━
+📅 Expected Start: ${formattedDate}
+⏱️ Expected Timeline: ${timeline.value || "Not specified"}
+
+*CONTACT PREFERENCE*
+━━━━━━━━━━━━━━━━━━━━━━
+📞 Preferred Contact: ${selectedContact}
+
+*ADDITIONAL REQUIREMENT*
+━━━━━━━━━━━━━━━━━━━━━━
+${message.value.trim() || "No additional requirement provided."}
+
+━━━━━━━━━━━━━━━━━━━━━━
+🏗️ *SSP STRUCTOVA*
+*Construction • Design • Execution*
+
+Thank you for trusting SSP STRUCTOVA.
+We look forward to discussing your project
+and building something great together. 🤝
+
+━━━━━━━━━━━━━━━━━━━━━━
+Generated from SSP STRUCTOVA Website
+            `.trim();
+
+
+            /* =================================================
+               WHATSAPP URL
+            ================================================= */
+
+            const whatsappURL =
+                "https://wa.me/" +
+                BUSINESS_WHATSAPP +
+                "?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            /* =================================================
+               BUTTON LOADING
+            ================================================= */
+
+            const submitButton =
+                document.getElementById(
+                    "projectSubmitBtn"
+                );
+
+
+            const originalButton =
+                submitButton.innerHTML;
+
+
+            submitButton.disabled = true;
+
+
+            submitButton.innerHTML =
+                `
+                <span>Preparing Enquiry...</span>
+                <i class="bi bi-hourglass-split"></i>
+                `;
+
+
+            /* =================================================
+               SUCCESS
+            ================================================= */
+
+            setTimeout(function () {
+
+                submitButton.disabled = false;
+
+                submitButton.innerHTML =
+                    originalButton;
+
+
+                successBox.classList.add(
+                    "show"
+                );
+
+
+                successBox.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+
+                /*
+                 * Open WhatsApp
+                 */
+
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
+
+
+            }, 700);
+
+        }
+    );
+
+
+    /* =====================================================
+       NEW ENQUIRY
+    ===================================================== */
+
+    if (newProjectBtn) {
+
+        newProjectBtn.addEventListener(
+            "click",
+            function () {
+
+                form.reset();
+
+                clearErrors();
+
+                messageCount.textContent =
+                    "0";
+
+                progress.textContent =
+                    "0%";
+
+                successBox.classList.remove(
+                    "show"
+                );
+
+
+                form.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+        );
+
+    }
+
+
+    updateProgress();
+
+});
+
+
