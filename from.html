@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSP Structova | Construction</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     START YOUR PROJECT FORM
+========================================================= -->
+
+<section class="start-project-section" id="start-project">
+
+    <!-- Background -->
+    <div class="project-form-grid"></div>
+    <div class="project-form-glow project-form-glow-one"></div>
+    <div class="project-form-glow project-form-glow-two"></div>
+
+    <div class="container">
+
+        <!-- =================================================
+             WELCOME HEADER
+        ================================================== -->
+
+        <div class="project-form-header">
+
+            <div class="project-form-label">
+                <span></span>
+                START YOUR PROJECT
+            </div>
+
+            <h2>
+                Let's Build Your
+                <strong>Vision Together.</strong>
+            </h2>
+
+            <p>
+                Welcome to <strong>SSP STRUCTOVA</strong>.
+                Tell us about your project and our team will
+                understand your requirement and get back to you.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             FORM WRAPPER
+        ================================================== -->
+
+        <div class="project-form-wrapper">
+
+            <!-- LEFT INFORMATION PANEL -->
+
+            <div class="project-form-info">
+
+                <div class="form-welcome-badge">
+                    <i class="bi bi-stars"></i>
+                    Welcome to SSP STRUCTOVA
+                </div>
+
+                <h3>
+                    Your Project.
+                    <span>Our Commitment.</span>
+                </h3>
+
+                <p>
+                    Whether you are planning a new home,
+                    commercial building, renovation or a
+                    complete turnkey project, share your
+                    requirements with us.
+                </p>
+
+
+                <!-- Process -->
+
+                <div class="form-process">
+
+                    <div class="form-process-item">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <div>
+                            <strong>
+                                Share Requirement
+                            </strong>
+
+                            <span>
+                                Tell us about your project
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-process-item">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <div>
+                            <strong>
+                                Expert Discussion
+                            </strong>
+
+                            <span>
+                                Our team reviews your requirement
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-process-item">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Plan & Execute
+                            </strong>
+
+                            <span>
+                                Move forward with confidence
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Trust -->
+
+                <div class="form-trust">
+
+                    <div class="form-trust-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Your requirement matters to us.
+                        </strong>
+
+                        <span>
+                            Our team will handle your information
+                            professionally.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT FORM -->
+
+            <div class="project-form-card">
+
+                <div class="form-card-top">
+
+                    <div>
+
+                        <span>
+                            PROJECT ENQUIRY
+                        </span>
+
+                        <h3>
+                            Tell Us About Your Project
+                        </h3>
+
+                    </div>
+
+                    <div class="form-step-badge">
+                        <span id="formProgress">0%</span>
+                        COMPLETE
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form
+                    id="startProjectForm"
+                    novalidate>
+
+
+                    <!-- =====================================
+                         CLIENT DETAILS
+                    ====================================== -->
+
+                    <div class="form-section-title">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+                            <strong>
+                                Client Details
+                            </strong>
+
+                            <small>
+                                Let's get to know you
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <!-- Client Name -->
+
+                        <div class="form-group">
+
+                            <label for="clientName">
+                                Client Name
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-person"></i>
+
+                                <input
+                                    type="text"
+                                    id="clientName"
+                                    name="clientName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="form-group">
+
+                            <label for="clientEmail">
+                                Client Email
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="clientEmail"
+                                    name="clientEmail"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <!-- Mobile -->
+
+                        <div class="form-group">
+
+                            <label for="clientMobile">
+                                Mobile Number
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="clientMobile"
+                                    name="clientMobile"
+                                    placeholder="10-digit mobile number"
+                                    maxlength="10"
+                                    required>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- State -->
+
+                        <div class="form-group">
+
+                            <label for="clientState">
+                                State
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-map"></i>
+
+                                <select id="clientState">
+
+                                    <option value="Bihar" selected>
+                                        Bihar
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         LOCATION
+                    ====================================== -->
+
+                    <div class="form-section-title">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Project Location
+                            </strong>
+
+                            <small>
+                                Where is your project located?
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <!-- District -->
+
+                        <div class="form-group">
+
+                            <label for="district">
+                                District
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                <select
+                                    id="district"
+                                    required>
+
+                                    <option value="">
+                                        Select District
+                                    </option>
+
+                                    <option>Araria</option>
+                                    <option>Arwal</option>
+                                    <option>Aurangabad</option>
+                                    <option>Banka</option>
+                                    <option>Begusarai</option>
+                                    <option>Bhagalpur</option>
+                                    <option>Bhojpur</option>
+                                    <option>Buxar</option>
+                                    <option>Darbhanga</option>
+                                    <option>East Champaran</option>
+                                    <option>Gaya</option>
+                                    <option>Gopalganj</option>
+                                    <option>Jamui</option>
+                                    <option>Jehanabad</option>
+                                    <option>Kaimur</option>
+                                    <option>Katihar</option>
+                                    <option>Khagaria</option>
+                                    <option>Kishanganj</option>
+                                    <option>Lakhisarai</option>
+                                    <option>Madhepura</option>
+                                    <option>Madhubani</option>
+                                    <option>Munger</option>
+                                    <option>Muzaffarpur</option>
+                                    <option>Nalanda</option>
+                                    <option>Nawada</option>
+                                    <option>Patna</option>
+                                    <option>Purnia</option>
+                                    <option>Rohtas</option>
+                                    <option>Saharsa</option>
+                                    <option>Samastipur</option>
+                                    <option>Saran</option>
+                                    <option>Sheikhpura</option>
+                                    <option>Sheohar</option>
+                                    <option>Sitamarhi</option>
+                                    <option>Siwan</option>
+                                    <option>Supaul</option>
+                                    <option>Vaishali</option>
+                                    <option>West Champaran</option>
+
+                                </select>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Project Location -->
+
+                        <div class="form-group">
+
+                            <label for="projectLocation">
+                                Project Area / Address
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-pin-map"></i>
+
+                                <input
+                                    type="text"
+                                    id="projectLocation"
+                                    placeholder="Area / locality / landmark"
+                                    required>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         PROJECT DETAILS
+                    ====================================== -->
+
+                    <div class="form-section-title">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Project Details
+                            </strong>
+
+                            <small>
+                                Tell us what you want to build
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <!-- Project Type -->
+
+                        <div class="form-group">
+
+                            <label for="projectType">
+                                Business / Project Type
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-building"></i>
+
+                                <select
+                                    id="projectType"
+                                    required>
+
+                                    <option value="">
+                                        Select Project Type
+                                    </option>
+
+                                    <option>
+                                        Residential
+                                    </option>
+
+                                    <option>
+                                        Commercial
+                                    </option>
+
+                                    <option>
+                                        Residential + Commercial
+                                    </option>
+
+                                    <option>
+                                        Industrial
+                                    </option>
+
+                                    <option>
+                                        Office
+                                    </option>
+
+                                    <option>
+                                        Renovation
+                                    </option>
+
+                                    <option>
+                                        Interior Project
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Service -->
+
+                        <div class="form-group">
+
+                            <label for="requiredService">
+                                Required Service
+                                <b>*</b>
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-tools"></i>
+
+                                <select
+                                    id="requiredService"
+                                    required>
+
+                                    <option value="">
+                                        Select Required Service
+                                    </option>
+
+                                    <option>
+                                        Structural Design & Planning as per Vastu
+                                    </option>
+
+                                    <option>
+                                        Turnkey Construction Execution
+                                    </option>
+
+                                    <option>
+                                        Cost Estimation & BOQ
+                                    </option>
+
+                                    <option>
+                                        Renovation & Remodeling
+                                    </option>
+
+                                    <option>
+                                        Site Supervision & Quality Control
+                                    </option>
+
+                                    <option>
+                                        Interior Design & Space Planning
+                                    </option>
+
+                                    <option>
+                                        Complete End-to-End Construction
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <small class="field-error"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quantity / Area -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="projectArea">
+                                Approx. Area / Quantity
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-rulers"></i>
+
+                                <input
+                                    type="text"
+                                    id="projectArea"
+                                    placeholder="e.g. 2000 sq.ft / G+2">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Budget -->
+
+                        <div class="form-group">
+
+                            <label for="budget">
+                                Estimated Budget
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-currency-rupee"></i>
+
+                                <select id="budget">
+
+                                    <option value="">
+                                        Select Budget Range
+                                    </option>
+
+                                    <option>
+                                        Below ₹10 Lakh
+                                    </option>
+
+                                    <option>
+                                        ₹10 – ₹25 Lakh
+                                    </option>
+
+                                    <option>
+                                        ₹25 – ₹50 Lakh
+                                    </option>
+
+                                    <option>
+                                        ₹50 Lakh – ₹1 Crore
+                                    </option>
+
+                                    <option>
+                                        Above ₹1 Crore
+                                    </option>
+
+                                    <option>
+                                        Not Decided Yet
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         TIMELINE
+                    ====================================== -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="startDate">
+                                Expected Start Date
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                <input
+                                    type="date"
+                                    id="startDate">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="timeline">
+                                Expected Timeline
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <i class="bi bi-clock"></i>
+
+                                <select id="timeline">
+
+                                    <option value="">
+                                        Select Timeline
+                                    </option>
+
+                                    <option>
+                                        Less than 3 Months
+                                    </option>
+
+                                    <option>
+                                        3 – 6 Months
+                                    </option>
+
+                                    <option>
+                                        6 – 12 Months
+                                    </option>
+
+                                    <option>
+                                        12 – 18 Months
+                                    </option>
+
+                                    <option>
+                                        More than 18 Months
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         CONTACT PREFERENCE
+                    ====================================== -->
+
+                    <div class="form-group full-width">
+
+                        <label>
+                            Preferred Contact Method
+                        </label>
+
+                        <div class="contact-options">
+
+                            <label class="contact-option">
+
+                                <input
+                                    type="radio"
+                                    name="contactMethod"
+                                    value="WhatsApp"
+                                    checked>
+
+                                <span>
+                                    <i class="bi bi-whatsapp"></i>
+                                    WhatsApp
+                                </span>
+
+                            </label>
+
+
+                            <label class="contact-option">
+
+                                <input
+                                    type="radio"
+                                    name="contactMethod"
+                                    value="Phone Call">
+
+                                <span>
+                                    <i class="bi bi-telephone"></i>
+                                    Phone Call
+                                </span>
+
+                            </label>
+
+
+                            <label class="contact-option">
+
+                                <input
+                                    type="radio"
+                                    name="contactMethod"
+                                    value="Email">
+
+                                <span>
+                                    <i class="bi bi-envelope"></i>
+                                    Email
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         MESSAGE
+                    ====================================== -->
+
+                    <div class="form-group full-width">
+
+                        <label for="projectMessage">
+                            Additional Requirement
+                        </label>
+
+                        <div class="input-wrap textarea-wrap">
+
+                            <i class="bi bi-chat-left-text"></i>
+
+                            <textarea
+                                id="projectMessage"
+                                rows="4"
+                                maxlength="500"
+                                placeholder="Tell us anything else about your project..."></textarea>
+
+                        </div>
+
+                        <div class="character-count">
+                            <span id="messageCount">0</span>/500
+                        </div>
+
+                    </div>
+
+
+                    <!-- AGREEMENT -->
+
+                    <label class="form-agreement">
+
+                        <input
+                            type="checkbox"
+                            id="formAgreement"
+                            required>
+
+                        <span class="custom-checkbox">
+                            <i class="bi bi-check"></i>
+                        </span>
+
+                        <p>
+                            I confirm that the information provided
+                            is correct and I agree to be contacted
+                            by <strong>SSP STRUCTOVA</strong> regarding
+                            my project enquiry.
+                        </p>
+
+                    </label>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="project-submit-btn"
+                        id="projectSubmitBtn">
+
+                        <span>
+                            Send Project Enquiry
+                        </span>
+
+                        <i class="bi bi-whatsapp"></i>
+
+                    </button>
+
+
+                    <div class="form-secure-note">
+
+                        <i class="bi bi-shield-lock-fill"></i>
+
+                        Your enquiry will be prepared securely
+                        for WhatsApp submission.
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SUCCESS MESSAGE
+        ================================================== -->
+
+        <div
+            class="project-success"
+            id="projectSuccess">
+
+            <div class="success-icon">
+                <i class="bi bi-check-lg"></i>
+            </div>
+
+            <span>
+                THANK YOU FOR CONTACTING US
+            </span>
+
+            <h3>
+                Welcome to
+                <strong>SSP STRUCTOVA.</strong>
+            </h3>
+
+            <p>
+                Your project enquiry has been prepared successfully.
+                WhatsApp will open with your complete project details.
+                Please press <strong>Send</strong> to share it with our team.
+            </p>
+
+            <button
+                type="button"
+                id="newProjectBtn">
+
+                Submit Another Enquiry
+                <i class="bi bi-arrow-repeat"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- FINAL GREETING -->
+
+        <div class="project-form-greeting">
+
+            <i class="bi bi-house-heart-fill"></i>
+
+            <span>
+                Your dream deserves the right foundation.
+                <strong>Let's build it together.</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="smart-manager-contact" id="smartManagerContact">
+
+    <!-- Mobile Call -->
+    <a
+        href="tel:8226801720"
+        class="manager-contact-btn manager-call-btn"
+        aria-label="Call Project Manager">
+
+        <span class="manager-contact-icon">
+            <i class="bi bi-telephone-fill"></i>
+        </span>
+
+        <span class="manager-contact-text">
+            <small>PROJECT MANAGER</small>
+            <strong>Call Now</strong>
+        </span>
+
+        <span class="manager-pulse"></span>
+
+    </a>
+
+
+    <!-- Desktop WhatsApp -->
+    <a
+        href="https://wa.me/8226801720?text=Hello%20SSP%20STRUCTOVA,%20I%20would%20like%20to%20discuss%20a%20project."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="manager-contact-btn manager-whatsapp-btn"
+        aria-label="WhatsApp Project Manager">
+
+        <span class="manager-contact-icon">
+            <i class="bi bi-whatsapp"></i>
+        </span>
+
+        <span class="manager-contact-text">
+            <small>PROJECT MANAGER</small>
+            <strong>WhatsApp Us</strong>
+        </span>
+
+        <span class="manager-pulse"></span>
+
+    </a>
+
+</div>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
